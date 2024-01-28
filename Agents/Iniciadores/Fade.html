@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /><link rel="icon" href="/Fotos/descarga.jpeg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tu Página con Tailwind</title>
+    <title>Fade</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -43,7 +43,7 @@
       <!-- Imagen a la izquierda -->
       <div class="absolute top-0 left-0 w-1/5 h-full bg-black">
         <img
-          src="..\\FotosAgentes\\Killjoy_-_Full_body.webp"
+          src="..\\FotosAgentes\\Fade.webp"
           alt="Imagen Izquierda"
           class="w-full h-full object-contain"
         />
@@ -51,7 +51,7 @@
 
       <!-- Fondo con imagen y sombra -->
       <img
-        src="..\\FondosPantallaAgentes\\killjoywallpaper.jpg"
+        src="..\\FondosPantallaAgentes\\fade.jpg"
         alt="Fondo de la página"
         class="absolute top-0 right-0 w-4/5 h-full object-cover"
       />
@@ -61,35 +61,29 @@
       >
         <!-- Nombre "KILLJOY" arriba -->
         <div class="mb-2 md:mb-4 mt-8">
-          <h1 class="md:text-8xl font-bold text-yellow-300">KILLJOY</h1>
+          <h1 class="md:text-8xl font-bold text-purple-300">FADE</h1>
         </div>
 
         <div class="mb-2 md:mb-8 mt-16">
           <p>
-            Killjoy es una brillante agente alemana que se encarga de tomar
-            posiciones clave del campo de batalla con su arsenal de inventos.<br />
-            Si su daño no acaba con los enemigos, su horda de robots ayudará a
-            su equipo a despejarlos en un abrir y cerrar de ojos.
+            Fade, la cazarrecompensas turca, controla el poder de las pesadillas para poner al descubierto los secretos de los enemigos. Armada con el terror mismo, da caza a sus objetivos y revela sus miedos más profundos, para después acabar con ellos en la oscuridad.
           </p>
         </div>
 
         <!-- Cuatro tarjetas con información y video en 2 columnas verticales -->
-        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 mt-16">
           <!-- Tarjeta 1 -->
           <div
             class=" bg-black bg-opacity-75 aspect-w-16 gap-4 p-2 aspect-h-9 flex flex-col md:flex-row rounded-md items-center justify-center text-center"
           >
             <p class="text-sm md:text-lg">
-              <span class="text-yellow-300 font-bold">Q - BOT DE ALARMA</span>
+              <span class="text-purple-300 font-bold">Q - APRESAR</span>
               <br />
-              EQUIPA un bot de alarma camuflado. DISPARA para desplegar un bot
-              que dará caza a los enemigos que estén dentro del alcance. Tras
-              alcanzar su objetivo, el bot explota y aplica vulnerabilidad.
-              MANTÉN PULSADO EQUIPAR para recoger un bot desplegado.
+              Equipa un orbe hecho con tinta de pesadilla. DISPARA para lanzar el orbe que, tras un determinado periodo de tiempo, caerá en picado hacia el suelo. Al llegar al suelo, la tinta explotará y se creará una zona de la que los enemigos no podrán escapar por las vías habituales. VUELVE A ACTIVAR la habilidad para que el proyectil caiga antes en un punto de su trayectoria.
             </p>
             <iframe
               class="md:w-[75%] md:h-[75%] w-full h-full rounded-md"
-              src="..\\FotosHabilidades\\AlarmBot_LowQuality.mp4"
+              src="..\\FotosHabilidades\\Q-seize_video_NEW.mp4"
               frameborder="0"
               allowfullscreen
               autoplay
@@ -103,15 +97,13 @@
             class="bg-black bg-opacity-75 aspect-w-16 gap-4 p-2 aspect-h-9 flex flex-col md:flex-row rounded-md items-center justify-center text-center"
           >
             <p class="text-sm md:text-lg">
-              <span class="text-yellow-300 font-bold">E - TORRETA</span>
+              <span class="text-purple-300 font-bold">E - TORMENTO</span>
               <br />
-              EQUIPA una torreta. DISPARA para desplegar una torreta que dispara
-              a los enemigos en un cono de 180 grados. MANTÉN PULSADO EQUIPAR
-              para recoger la torreta desplegada.
+              Equipa una pesadilla. DISPARA para lanzar el orbe que, tras un determinado periodo de tiempo, caerá en picado hacia el suelo. Al llegar al suelo, el orbe se convertirá en una pesadilla que revelará la ubicación de los enemigos que se encuentren en su línea de visión. Los enemigos pueden destruir la pesadilla. VUELVE A ACTIVAR la habilidad para que el proyectil caiga antes en un punto de su trayectoria.
             </p>
             <iframe
               class="md:w-[75%] md:h-[75%] w-full h-full rounded-md"
-              src="..\\FotosHabilidades\\Turret_LowQuality.mp4"
+              src="..\\FotosHabilidades\\E-Haunt_video.mp4"
               frameborder="0"
               allowfullscreen
               autoplay
@@ -125,15 +117,13 @@
             class="bg-black bg-opacity-75 aspect-w-16 gap-4 p-2 aspect-h-9 flex flex-col md:flex-row rounded-md items-center justify-center text-center"
           >
             <p class="text-sm md:text-lg">
-              <span class="text-yellow-300 font-bold">C - NANOENJAMBRE</span>
+              <span class="text-purple-300 font-bold">C - ACECHADORE</span>
               <br />
-              EQUIPA una granada de nanoenjambre. DISPARA para lanzar la
-              granada. Cuando aterriza, la granada enjambre se camufla. ACTIVA
-              el nanoenjambre para desplegar un enjambre de nanobots.
+              EQUIPA un Acechador. DISPARA para enviar al Acechador, que se desplazará en línea recta. El Acechador se adherirá a los enemigos o rastros situados en su cono de visión frontal y los perseguirá. Si los alcanza, reducirá sus campos de visión. MANTÉN PULSADO el botón de DISPARAR para dirigir al Acechador en la dirección de la mira.
             </p>
             <iframe
               class="md:w-[75%] md:h-[75%] w-full h-full rounded-md"
-              src="..\\FotosHabilidades\\Grenade_LowQuality.mp4"
+              src="..\\FotosHabilidades\\C-Prowler_video.mp4"
               frameborder="0"
               allowfullscreen
               autoplay
@@ -147,16 +137,13 @@
             class="bg-black bg-opacity-75 aspect-w-16 gap-4 p-2 aspect-h-9 flex flex-col md:flex-row rounded-md items-center justify-center text-center"
           >
             <p class="text-sm md:text-lg">
-              <span class="text-yellow-300 font-bold">X - BLOQUEO</span>
+              <span class="text-purple-300 font-bold">X - OCASO</span>
               <br />
-              EQUIPA el dispositivo de bloqueo. DISPARA para desplegar el
-              dispositivo. Tras un largo periodo de carga, el dispositivo
-              detiene a todos los enemigos que estén dentro del radio de efecto.
-              Los enemigos pueden destruir el dispositivo.
+              EQUIPA el poder del miedo. DISPARA para emitir una oleada de energía terrorífica capaz de atravesar paredes. Esta energía deja un rastro hasta el oponente y, además, lo ensordece y aplica declive.
             </p>
             <iframe
               class="md:w-[75%] md:h-[75%] w-full h-full rounded-md"
-              src="..\\FotosHabilidades\\Ultimate_LowQualityV02.mp4"
+              src="..\\FotosHabilidades\\X-Nightfall_Video.mp4"
               frameborder="0"
               allowfullscreen
               autoplay
