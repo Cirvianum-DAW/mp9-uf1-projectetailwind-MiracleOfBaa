@@ -1,7 +1,6 @@
 # Tailwind Project
 
 ## Arxius i instruccions d'execució
-
 El projecte té els següents fitxers:
 
 - `src/index.html`: Aquest fitxer conté el codi HTML de la pàgina web.
