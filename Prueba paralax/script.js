@@ -1,12 +1,15 @@
 window.addEventListener('scroll', function() {
-    const parallaxSection = document.querySelector('.parallax');
-    const videoBg = document.querySelector('.video-bg');
-    const parallaxOffset = parallaxSection.offsetTop - window.innerHeight;
-    
-    if (window.pageYOffset > parallaxOffset) {
-      videoBg.classList.add('scrolling');
+  const parallaxSections = document.querySelectorAll('.parallax');
+
+  parallaxSections.forEach(function(section) {
+    const video = section.querySelector('video');
+    const parallaxOffset = section.offsetTop - window.innerHeight;
+    const isSectionVisible = window.pageYOffset > parallaxOffset;
+
+    if (isSectionVisible) {
+      section.classList.remove('video-hidden');
     } else {
-      videoBg.classList.remove('scrolling');
+      section.classList.add('video-hidden');
     }
   });
-  
+});

@@ -1,4 +1,5 @@
-*, 
+/* Estilos generales */
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -9,6 +10,11 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para la sección principal */
 main {
   height: 100vh;
   overflow-x: hidden;
@@ -16,6 +22,7 @@ main {
   perspective: 2px;
 }
 
+/* Estilos para las secciones de paralaje */
 section {
   transform-style: preserve-3d;
   position: relative;
@@ -24,64 +31,45 @@ section {
   align-items: center;
   justify-content: center;
   color: #FFF;
+  transition: background-color 0.5s ease; /* Transición de color de fondo */
 }
 
+/* Estilos para el texto dentro de las secciones */
 section h1 {
   text-align: center;
   font-size: 4rem;
   font-family: sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
-.no-parallax {
-  background-color: #000000;
-  z-index: 999;
+/* Estilos para los videos */
+.parallax {
+  position: relative;
 }
 
-.parallax h1 {
-  width: 60%;
-  font-size: 2rem;
-}
-
-.parallax::after {
-  content: " ";
+.parallax video {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-5px) scale(2);
-  background-size: cover;
-  z-index: -1;
-}
-
-.bg::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  background-size: cover;
-}
-
-.bg video {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
+  z-index: -1;
+  opacity: 1;
+  filter: blur(0); /* Inicialmente no hay desenfoque */
+  transition: opacity 0.5s ease, filter 0.5s ease; /* Transiciones de opacidad y desenfoque */
 }
 
+/* Clase para ocultar los videos */
+.parallax.video-hidden video {
+  opacity: 0.5; /* Cambiamos la opacidad a 0.5 cuando el video está oculto */
+  filter: blur(10px); /* Aplicar desenfoque cuando el video está oculto */
+}
+
+/* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {
   section h1 {
     font-size: 8rem;
-  }
-  
-  .parallax h1 {
-    font-size: 4rem;
   }
 }
