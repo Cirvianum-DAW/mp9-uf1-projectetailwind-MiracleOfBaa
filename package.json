@@ -4,7 +4,10 @@
   "description": "Projecte que utilitza Tailwind CSS i Parcel",
   "scripts": {
     "dev": "parcel src/index.html && parcel src/index.html --open",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "optimize-images": "node optimize-images.js",
+    "dev-with-images": "npm run optimize-images && npm run dev",
+    "build-with-images": "npm run optimize-images && npm run build"
   },
   "keywords": [
     "tailwind",

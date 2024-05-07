@@ -3,9 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
@@ -19,57 +16,49 @@ main {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 2px;
 }
 
 /* Estilos para las secciones de paralaje */
 section {
-  transform-style: preserve-3d;
   position: relative;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFF;
-  transition: background-color 0.5s ease; /* Transición de color de fondo */
+  color: white;
 }
 
 /* Estilos para el texto dentro de las secciones */
 section h1 {
   text-align: center;
   font-size: 4rem;
-  font-family: sans-serif;
-  position: relative;
-  z-index: 1;
 }
 
 /* Estilos para los videos */
-.parallax {
-  position: relative;
-}
-
-.parallax video {
+section video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1.2);
   object-fit: cover;
   z-index: -1;
-  opacity: 1;
-  filter: blur(0); /* Inicialmente no hay desenfoque */
-  transition: opacity 0.5s ease, filter 0.5s ease; /* Transiciones de opacidad y desenfoque */
-}
-
-/* Clase para ocultar los videos */
-.parallax.video-hidden video {
-  opacity: 0.5; /* Cambiamos la opacidad a 0.5 cuando el video está oculto */
-  filter: blur(10px); /* Aplicar desenfoque cuando el video está oculto */
 }
 
 /* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {
   section h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
+}
+
+/* Efecto de paralaje */
+section:nth-child(odd) video {
+  transform: translate(-50%, -50%) scale(1.2) translateY(-10%);
+}
+
+section:nth-child(even) video {
+  transform: translate(-50%, -50%) scale(1.2) translateY(10%);
 }
