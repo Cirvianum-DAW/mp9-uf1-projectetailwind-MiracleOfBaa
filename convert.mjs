@@ -179,4 +179,4 @@ async function main() {
 }
 
 // Llamar a la función principal
-main().catch(error => console.error('Error en la función principal:', erro
+main().catch(error => console.error('Error en la función principal:', error));
