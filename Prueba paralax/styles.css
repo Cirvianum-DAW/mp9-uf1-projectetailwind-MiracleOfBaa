@@ -1,64 +1,23 @@
-/* Estilos generales */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body,
+html {
+  height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* Estilos para la sección principal */
-main {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-/* Estilos para las secciones de paralaje */
-section {
-  position: relative;
-  height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
 }
 
-/* Estilos para el texto dentro de las secciones */
-section h1 {
-  text-align: center;
-  font-size: 4rem;
+.jarallax {
+  min-height: 100vh;
+  height: 100%;
 }
 
-/* Estilos para los videos */
-section video {
+.jarallax > .jarallax-img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%) scale(1.2);
   object-fit: cover;
+  /* Support for plugin video cover */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-}
-
-/* Media query para pantallas más grandes */
-@media screen and (min-width: 768px) {
-  section h1 {
-    font-size: 6rem;
-  }
-}
-
-/* Efecto de paralaje */
-section:nth-child(odd) video {
-  transform: translate(-50%, -50%) scale(1.2) translateY(-10%);
-}
-
-section:nth-child(even) video {
-  transform: translate(-50%, -50%) scale(1.2) translateY(10%);
 }
